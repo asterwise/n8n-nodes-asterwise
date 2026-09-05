@@ -1,0 +1,33 @@
+{
+  "name": "n8n-nodes-asterwise",
+  "version": "0.1.0",
+  "description": "n8n node for the Asterwise astrology API: Vedic and Western natal charts, kundali matching with Rajju and Vedha vetoes, panchanga, numerology, or any endpoint via a raw request.",
+  "license": "MIT",
+  "homepage": "https://asterwise.com",
+  "keywords": ["n8n-community-node-package", "astrology", "vedic-astrology", "asterwise", "kundali", "panchanga", "numerology"],
+  "author": { "name": "Asterwise", "email": "support@asterwise.com" },
+  "repository": { "type": "git", "url": "https://github.com/asterwise/n8n-nodes-asterwise.git" },
+  "scripts": {
+    "build": "n8n-node build",
+    "lint": "n8n-node lint",
+    "lint:fix": "n8n-node lint --fix",
+    "test": "node scripts/check.mjs",
+    "prepublishOnly": "n8n-node prerelease"
+  },
+  "files": ["dist"],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "strict": true,
+    "credentials": ["dist/credentials/AsterwiseApi.credentials.js"],
+    "nodes": ["dist/nodes/Asterwise/Asterwise.node.js"]
+  },
+  "devDependencies": {
+    "@n8n/node-cli": "*",
+    "eslint": "9.39.4",
+    "prettier": "3.8.3",
+    "typescript": "5.9.3"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}

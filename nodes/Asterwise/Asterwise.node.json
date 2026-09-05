@@ -1,0 +1,10 @@
+{
+  "node": "n8n-nodes-asterwise.asterwise",
+  "nodeVersion": "1.0",
+  "codexVersion": "1.0",
+  "categories": ["Data & Storage", "Utility"],
+  "resources": {
+    "credentialDocumentation": [{ "url": "https://docs.asterwise.com/" }],
+    "primaryDocumentation": [{ "url": "https://github.com/asterwise/n8n-nodes-asterwise" }]
+  }
+}
