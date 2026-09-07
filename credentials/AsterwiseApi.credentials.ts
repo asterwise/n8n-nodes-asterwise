@@ -13,7 +13,7 @@ export class AsterwiseApi implements ICredentialType {
 
 	icon: Icon = { light: 'file:../icons/asterwise.svg', dark: 'file:../icons/asterwise.dark.svg' };
 
-	documentationUrl = 'https://docs.asterwise.com/';
+	documentationUrl = 'https://docs.asterwise.com/quickstart/';
 
 	properties: INodeProperties[] = [
 		{
