@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "description": "n8n node for the Asterwise astrology API: Vedic and Western natal charts, kundali matching with Rajju and Vedha vetoes, panchanga, numerology, or any endpoint via a raw request.",
   "license": "MIT",
-  "homepage": "https://asterwise.com",
+  "homepage": "https://asterwise.com/?utm_source=npm&utm_medium=package&utm_campaign=n8n-nodes-asterwise",
   "keywords": [
     "n8n-community-node-package",
     "astrology",
