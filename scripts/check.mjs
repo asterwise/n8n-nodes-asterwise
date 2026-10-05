@@ -40,4 +40,20 @@ for (const [op, fields] of Object.entries(need)) for (const f of fields) if (!by
 const names = node.properties.map((p) => p.name);
 const dupes = names.filter((n, i) => names.indexOf(n) !== i && n !== 'operation');
 if (dupes.length) fail('duplicate property names: ' + dupes);
+// The icons are the Asterwise mark (as in asterwise.com/public/favicon.svg): a solid
+// upright pyramid in four blues interlocked with a hollow inverted wireframe. Until
+// 0.1.2 they were an unrelated purple pentagon, so check the shipped files.
+const fs = require('node:fs');
+const path = require('node:path');
+const MARK = ['points="250,120 130,295 250,235" fill="#354cc3"', 'points="250,120 250,235 370,295" fill="#26378a"',
+  'points="250,120 370,295 250,355" fill="#4b64db"', 'points="250,120 250,355 130,295" fill="#6b86ff"', 'stroke="#aab6ec"'];
+const iconRefs = [node.icon.light, node.icon.dark, cred.icon.light, cred.icon.dark];
+for (const ref of iconRefs) {
+  const base = ref === node.icon.light || ref === node.icon.dark ? path.dirname(require.resolve('../' + pkg.n8n.nodes[0])) : path.dirname(require.resolve('../' + pkg.n8n.credentials[0]));
+  const file = path.resolve(base, ref.replace(/^file:/, ''));
+  if (!fs.existsSync(file)) fail('icon missing: ' + file);
+  const svg = fs.readFileSync(file, 'utf8');
+  if (MARK.some((m) => !svg.includes(m))) fail('icon is not the Asterwise mark: ' + file);
+  if (!/viewBox="95 95 310 310"/.test(svg)) fail('icon must be square: ' + file);
+}
 console.log(`ok: ${ops.length} operations, ${bodyProps.length} routed body fields, credential test on ${cred.test.request.url}`);
