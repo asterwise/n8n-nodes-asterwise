@@ -1,6 +1,6 @@
 # n8n-nodes-asterwise
 
-An [n8n](https://n8n.io) community node for the [Asterwise](https://asterwise.com) astrology API. Vedic and Western natal charts, kundali matching with Rajju and Vedha reported as vetoes, daily panchanga, numerology, and a raw-request operation for any of the 118 endpoints. Usable as a tool by n8n AI agents.
+An [n8n](https://n8n.io) community node for the [Asterwise](https://asterwise.com) astrology API. Vedic and Western natal charts, kundali matching with Rajju and Vedha reported as vetoes, daily panchanga, numerology, and a raw-request operation for any of the 117 endpoints. Usable as a tool by n8n AI agents.
 
 ## Install
 
@@ -33,7 +33,7 @@ Schedule Trigger (every day 06:00) → Asterwise (Panchanga, date `{{ $today.toF
 
 ## Accuracy
 
-Every Asterwise position is computed with the Swiss Ephemeris and [checked against NASA JPL Horizons](https://asterwise.com/accuracy/): 80 positions from 1950 to 2050, median difference 0.046 arcseconds, raw data and script published.
+Every Asterwise position is computed with the Swiss Ephemeris and [checked against NASA JPL Horizons](https://asterwise.com/accuracy/): 80 positions from 1950 to 2050, median difference 0.050 arcseconds, raw data and script published.
 
 ## Develop
 
