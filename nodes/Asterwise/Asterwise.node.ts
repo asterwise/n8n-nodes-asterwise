@@ -173,7 +173,7 @@ export class Asterwise implements INodeType {
 						name: 'Raw Request',
 						value: 'raw',
 						action: 'Call any endpoint',
-						description: 'Any of the 118 endpoints; see https://docs.asterwise.com',
+						description: 'Any of the 131 endpoints; see https://docs.asterwise.com',
 						routing: {
 							request: {
 								method: '={{ $parameter["method"] }}' as unknown as IHttpRequestMethods,
