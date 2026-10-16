@@ -1,6 +1,6 @@
 # n8n-nodes-asterwise
 
-An [n8n](https://n8n.io) community node for the [Asterwise](https://asterwise.com) astrology API. Vedic and Western natal charts, kundali matching with Rajju and Vedha reported as vetoes, daily panchanga, numerology, and a raw-request operation for any of the 131 endpoints. Usable as a tool by n8n AI agents.
+An [n8n](https://n8n.io) community node for the [Asterwise](https://asterwise.com) astrology API. Vedic and Western natal charts, kundali matching with Rajju and Vedha reported as vetoes, daily panchanga, numerology, and a raw-request operation for any of the 129 endpoints. Usable as a tool by n8n AI agents.
 
 ## Install
 
